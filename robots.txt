@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /search/
 Disallow: /searchadv/
 
-Sitemap: https://jojozhuang.github.io/sitemap.xml
+Sitemap: https://wiki.monga.dev.br/sitemap.xml

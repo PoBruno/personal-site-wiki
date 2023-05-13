@@ -15,7 +15,7 @@ permalink: /blog/:year/:month/:day/:title/
 
 # Setup
 mywebsite:
-  url: https://jojozhuang.github.io
+  url: https://wiki.monga.dev.br
   title: Computer Science
   subtitle: Data Structure, Algorithm, Angular, React, etc.
   logo: /assets/assets/website-logo.png
@@ -25,8 +25,8 @@ mywebsite:
 rsstitle: CS Geek
 
 author:
-  name: 'Johnny'
-  email: 'jojozhuang@gmail.com'
+  name: 'Bruno'
+  email: 'bruno@monga.dev.br'
 
 collections:
   algorithm:
