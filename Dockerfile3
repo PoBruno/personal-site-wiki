@@ -1,0 +1,9 @@
+FROM jekyll/minimal:4.2.0
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN chmod 777 /usr/src/app -R
+
+RUN JEKYLL_ENV=nas jekyll build

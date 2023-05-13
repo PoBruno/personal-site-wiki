@@ -1,0 +1,55 @@
+markdown: kramdown
+highlighter: rouge
+#incremental: true
+
+excerpt_separator: "\n" # for windows only, the default value is "\n\n".
+
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+
+permalink: /blog/:year/:month/:day/:title/
+
+# Setup
+mywebsite:
+  url: https://jojozhuang.github.io
+  title: Computer Science
+  subtitle: Data Structure, Algorithm, Angular, React, etc.
+  logo: /assets/assets/website-logo.png
+#theme: jekyll-theme-cayman
+
+# rss
+rsstitle: CS Geek
+
+author:
+  name: 'Johnny'
+  email: 'jojozhuang@gmail.com'
+
+collections:
+  algorithm:
+    output: true
+    permalink: /:collection/:name/
+  programming:
+    output: true
+    permalink: /:collection/:name/
+  architecture:
+    output: true
+    permalink: /:collection/:name/
+  cloud:
+    output: true
+    permalink: /:collection/:name/
+  tutorial:
+    output: true
+    permalink: /:collection/:name/
+  project:
+    output: true
+
+exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
+#exclude: ["note", "vendor", "favorite.html", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
+#https://sacha.me/articles/jekyll-rouge/
+#https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml
+
+#https://jekyllrb.com/docs/permalinks/

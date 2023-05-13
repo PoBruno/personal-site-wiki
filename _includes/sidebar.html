@@ -1,0 +1,95 @@
+<a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+  <i class="far fa-hand-point-left"></i>
+</a>
+<nav id="sidebar" class="sidebar-wrapper">
+  <div class="sidebar-content">
+    <div class="sidebar-brand">
+      <a href="#">{{subject.name}}</a>
+      <div id="close-sidebar">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <!-- sidebar-header -->
+    <div class="sidebar-search">
+      <div>
+        <form class="form-inline" action="/search">
+          <div class="input-group">
+            <input type="text" class="form-control search-menu" name="k" placeholder="Search...">
+            <input type="hidden" id="c" name="c" value="{{page.key}}">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <button class="submit-btn" style="height:24px" type="submit">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- sidebar-search  -->
+    <div class="sidebar-menu">
+      <ul>
+        {% for category in subject.categories %}
+          <li class="header-menu">
+            <span>{{category.name}}</span>
+          </li>
+          {% for subcategory in category.subcategories %}
+          {% assign list = postings | where: 'subcategory', subcategory.subcategory %}
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="{{subcategory.icon}}"></i>
+              <span>{{subcategory.name}}</span>
+              <span class="badge badge-pill badge-success">{{list | size}}</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+               {% for posting in list %}
+                <li>
+                  <a href="{{ posting.url }}">{{ posting.title }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+          {% endfor %}
+        {% endfor %}
+        <li class="header-menu">
+          <span>Extra</span>
+        </li>
+        <li>
+          <a href="{{ site.url }}/searchadv">
+            <i class="fas fa-search"></i>
+            <span>Advanced Search</span>
+            <span class="badge badge-pill badge-primary">Beta</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/jojozhuang/jojozhuang.github.io">
+            <i class="fab fa-github-square"></i>
+            <span>GitHub</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- sidebar-menu  -->
+  </div>
+  <!-- sidebar-content  -->
+  <div class="sidebar-footer">
+    <a href="#">
+      <i class="fa fa-bell"></i>
+      <span class="badge badge-pill badge-warning notification">3</span>
+    </a>
+    <a href="#">
+      <i class="fa fa-envelope"></i>
+      <span class="badge badge-pill badge-success notification">7</span>
+    </a>
+    <a href="#">
+      <i class="fa fa-cog"></i>
+      <span class="badge-sonar"></span>
+    </a>
+    <a href="#">
+      <i class="fa fa-power-off"></i>
+    </a>
+  </div>
+</nav>

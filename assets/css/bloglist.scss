@@ -1,0 +1,57 @@
+.dl-unsur-blog {
+    position:relative;
+    float:left;
+    margin-top: -20px;
+}
+
+.dl-unsur-blog dd {
+    width:100%;
+    border-top:1px solid #959595;
+    display:block;
+    float:left;
+    /*padding:8px 0;*/
+}
+.dl-unsur-blog dd:first-child {
+    border-top:0;
+}
+
+.dl-unsur-blog dd > a {
+    width:100%;
+    margin-left:5px;
+}
+
+.dl-unsur-blog dd > a > div {
+    font-family:sans-serif, serif;
+    font-size:23px;
+    width:100%;
+    line-height:1.2em;
+}
+.dl-unsur-blog dd> div > p {
+    width:100%;
+    margin:0 0 0 5px;
+    font-size:15px;
+}
+.dl-unsur-blog dd> .tag {
+    font-style:italic;
+    font-size:15px;
+}
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+@media (max-width: 768px) {
+  .dl-unsur-blog dd > a > div {
+    font-size:20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dl-unsur-blog dd > a > div {
+    font-size:17px;
+  }
+  .dl-unsur-blog dd> div > p {
+    font-size:14px;
+  }
+  .dl-unsur-blog dd> .tag {
+    font-size:14px;
+  }
+}

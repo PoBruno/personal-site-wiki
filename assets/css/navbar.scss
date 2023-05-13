@@ -1,0 +1,60 @@
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+/* change the background color */
+.navbar-custom {
+  background-color: #24272d;
+  padding: 0 !important;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: rgba(255,255,255,.8);
+  margin-left: 1rem;
+}
+/* change the link color and add padding for height */
+.navbar-custom .navbar-nav .nav-link {
+  color: rgba(255,255,255,.5);
+  padding: 1rem 0.5rem;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  color: #ffffff;
+  background-color: #24272d; /* add background-color to active links */
+}
+
+.navbar-custom .form-inline {
+  padding: 0rem 0.75rem 0rem 0.5rem;
+}
+
+.navbar-custom .env-name {
+  color: whitesmoke !important;
+  font-size: 12px;
+  background-color: olivedrab;
+  margin: 18px 0px 18px 10px !important;
+  padding: 0px 8px !important;
+  font-weight: bold;
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .search-form {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar-toggler {
+    margin: .30rem .25rem;
+    padding: .45rem .75rem;
+  }
+}
+@media (max-width: 576px) {
+  .search-btn {
+    margin-left: 8px;
+  }
+  .navbar-custom .navbar-nav .nav-link {
+    padding: 0.5rem 0.5rem;
+  }
+}
