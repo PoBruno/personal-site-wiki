@@ -1,8 +1,8 @@
 
 # Setup Locally
 ```bash
-git clone https://github.com/jojozhuang/jojozhuang.github.io.git
-cd jojozhuang.github.io
+git clone https://github.com/pobruno/personal-site-wiki
+cd pobruno.github.io
 bundle exec jekyll serve --port 12001
 ```
 Access http://localhost:12001/ in web browser, enjoy!
